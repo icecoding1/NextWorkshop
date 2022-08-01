@@ -1,6 +1,4 @@
-
 import Router from 'next/router';
-import Nav from '../components/nav'
 
 const handleClickIndex = () => Router.push({
   pathname: '/'

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "myapp.scss",
+        "_headnav.scss"
+    ],
+    "names": [],
+    "file": "myapp.css"
+}

@@ -1,9 +1,6 @@
 import React from 'react'
-import { useState } from 'react';
 
-
-export default function Home() {
-  // const text = "hello";
+export default function state() {
   const [coust, setNumber] = useState(0);
   const [text, setText] = useState("hello");
 
@@ -21,17 +18,4 @@ export default function Home() {
       </div>
     </div>
   )
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,24 +1,25 @@
-import React, { Component } from 'react'
-import App from 'next/app'
-import Nav from '../components/nav'
+import { React, useEffect } from 'react'
+import '../styles/myapp.css'
+import Nav from '../components/Nav'
 import Head from 'next/head'
+import 'bootstrap/dist/css/bootstrap.css';
 
-export default class Myclass extends App {
-  render() {
-    const { Component } = this.props;
-    return (
-      <div>
-        <Head>
-          <title> test title </title>
+export default function MyApp({ Component, pageProps }) {
 
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"></link>
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
 
-        </Head>
-        <Nav />
-        <Component />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  return (
+    <div>
+      <Head>
+        <title>my website</title>
+      </Head>
+      <Nav />
+      <div className='container'>
+        <Component {...pageProps} />
       </div>
-    )
-  }
-}
+    </div>
+  )
 
+}
